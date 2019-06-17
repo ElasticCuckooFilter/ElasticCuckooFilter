@@ -1,0 +1,6 @@
+# elastic-cuckoo-filter
+## Introduction
+Compared with Bloom filters, Cuckoo filters achieve a similar false positive rate for a given amount of memory. However, Cuckoo filters can support deletions while Bloom filters cannot. Therefore, some recent applications have replaced Bloom filters with Cuckoo filters. Unfortunately, the Cuckoo filter data structure is inflexible: 1) its size must be $2^n$, where $n$ is a positive integer; and 2) its size cannot be dynamically tuned. In this paper, we aim to make Cuckoo filters elastic. We propose the Elastic Cuckoo filter with three techniques: virtualization, compression and extension. The size of the Elastic Cuckoo filter is flexible, and tunable, i.e., it can be compressed or extended to any size. Theoretical and experimental results show that our Elastic Cuckoo filter is indeed flexible and tunable, and inherits all the advantages of the standard Cuckoo filter: same false positive rate, same speed, and it supports deletions. We provide the source code of our Elastic Cuckoo filter at Github.
+## About
+- `src` contains the code of implementation of Cuckoo filters, Dynamic Cuckoo filters and Elastic Cuckoo filters
+- `data`: contains CAIDA datasets and programs for generating synthetic datasets
