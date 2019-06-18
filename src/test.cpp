@@ -460,7 +460,7 @@ void testSingleResizePFRate(ECF*cR, set<string>&si, set<string>&sn, int testSetC
     sum_time = (long long)(time2.tv_sec - time1.tv_sec) * 1000000000LL + (time2.tv_nsec - time1.tv_nsec);
     tp = (double)1000000 * stC / sum_time;
 }
-void testResizeFPRate(FILE * wf)
+void testShrinkageFPRate(FILE * wf)
 {
     int test_num = 20;
     int size = 1<<14;
@@ -525,7 +525,7 @@ void testResizeFPRate(FILE * wf)
     fprintf(wf, "\n");
 }
 
-void testFalse(FILE *wf) {
+void testExtensionFPRate(FILE *wf) {
     int unitlen = 2048;
     int insertsize = 7373;
 
@@ -649,8 +649,8 @@ int main()
     //testLoadRatio(wf);
     //testMemoryAccess(wf);
     //testResizeLookupThp(wf);
-    //testFalse(wf);
-    testResizeFPRate(wf);
+    //testExtensionFPRate(wf);
+    testShrinkageFPRate(wf);
     fclose(wf); 
     return(0);
 }

@@ -4,15 +4,16 @@ This directory contains necessary source codes for our paper. The source codes i
 CF: Cuckoo Filter  
 DCF: Dynamic Cuckoo Filter  
 ECF: Elastic Cuckoo Filter  
-ECFC: Elastic Cuckoo Filter(specified for compressing)  
 
 ### Experiments
 - `testMaxInsertNumber`: estimate the maximum number of items that can be inserted into filters.
 - `testInsertThp`: estimate insertion throughput.
 - `testLookupThp`: estimate query throughput.
 - `testLoadRatio`: estimate load ratio.
-- `testResizeLookupThp`: estimate query throughput before and after compression or extension.
+- `testResizeLookupThp`: estimate query throughput before and after shrinkage or extension.
 - `testMemoryAccess`: estimate hop number(kicks) and memory access(memory write and memory read).
+- `testExtensionFPRate`: estimate false positive rate before and after extension.
+- `testShrinkageFPRate`: estimate false positive rate before and after shrinkage.
 
 ### Usage
 - To run the test, `make` and `./test`.
